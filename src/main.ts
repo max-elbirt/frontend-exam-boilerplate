@@ -1,6 +1,10 @@
 import './style.scss'
 // keep the line above and write your code below.
 
+interface currResult {
+    CURRENCY: {NAME: string, RATE:Number} 
+}
+
 const exchangeRateEndpoint = 'https://currency-ror1.vercel.app/api/currency';
 const datesCurrenciesArrayEndpoint = 'https://currency-ror1.vercel.app/api/dates-table';
 
@@ -46,9 +50,13 @@ function attachListeners() {
  */
 
 async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {
+    const response = await fetch(exchangeRateEndpoint + "rdate=${dateCode}" + "&" + "curr=${currencyCode}")
+    const res = await response.json()
 
+    return res;
 
 }
+
 
 
 /**
@@ -58,6 +66,13 @@ async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {
  */
 
 async function getExchangeRateFromForm(event) {
+    const parameters = await window.URLSearchParams;
+    const date;
+    const curr;
+    const result = date + curr;
+    //i'm not sure how to do it exactly but i know i need yo use URL search params
+    //then i will pass the data on to my get date from api function
+    return result
   event.preventDefault();
   event.stopPropagation();
 
