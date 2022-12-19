@@ -4,9 +4,64 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/smiley-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GRUnitech WebDev Exam</title>
+    <title>Max's Exam</title>
   </head>
   <body>
+    <h1>Currency Converter</h1>
+
+<section class="currency-converter-form">
+  <form id="currency-converter-form" target="_self" method="get">
+    
+    <select name="currencies" id="currencyDropdown">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GPB</option>
+      <option value="CAD">CAD</option>
+      <option value="AUD">AUD</option>
+      <option value="GPY">GPY</option>
+    </select>
+
+    <input type="date" value="2021-10-01">
+
+    <input type="submit">
+    
+    
+    
+    <div class="result">
+      Exchange Rate to ILS: <span id="exchangeResult">3.452</span>
+    </div>
+  </form>
+</section>
+
+<section class="currency-converter-table">
+  <table>
+    <thead>
+    <tr>
+      <th>date</th>
+      <th>currency</th>
+      <th>exchange rate</th>
+    </tr>
+    <tr>
+      <td>12-01-2022</td>
+      <td>USD</td>
+      <td>3.1548</td>
+    </tr>
+    <tr>
+      <td>01-02-2021</td>
+      <td>EUR</td>
+      <td>3.276</td>
+    </tr>
+    <tr>
+      <td>20-02-2020</td>
+      <td>GPY</td>
+      <td>3.1548</td>
+    </tr>
+    </thead>
+    
+  
+  </table>
+
+</section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
